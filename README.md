@@ -4,6 +4,14 @@
 
 In this project, environmental triggers are detected using sound and motion sensors on the STM32. When a trigger is detected, the system sends a "Motion certainly detected!" message to the ESP32 via UART. The ESP32 transmits this message to the Adafruit IO Dashboard using the MQTT protocol. The buzzer is simultaneously activated and produces a loud warning sound. A button on the dashboard allows the user to remotely turn off the buzzer. If the user does not turn off the buzzer by pressing the button within 10 seconds, the system automatically deactivates the buzzer.
 
+Figure 1 : System Overview
+
+<img src="https://github.com/ssenanb/STM32-ESP32-MQTT-Controlled-Trigger-and-Alarm-System/blob/main/System_Overview.jpeg" alt="System Overview" width="500"/>
+
+Figure 2 : Adafruit IO Dashboard Output
+
+<img src="https://github.com/ssenanb/STM32-ESP32-MQTT-Controlled-Trigger-and-Alarm-System/blob/main/dashboard.png" alt="Dashboard" width="500"/>
+
 # Software Architecture
 
 This system is built on an event-driven software architecture. Two embedded devices (STM32 and ESP32) are connected at the hardware level via UART and their tasks are divided as follows:
